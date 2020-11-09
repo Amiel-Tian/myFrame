@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>无秋后台管理系统</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/wuqiu.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+</head>
+<body class="">
+    <div class="left_title">
+        <div class="left_header">wuqiuAdmin</div>
+
+        <ul class="wuqiu_title">
+            <li class="wuqiu_title_li">
+                <a href="javascript:;" src="homepage" class="wuqiu_title_a"> 主页
+                    <span class="iconfont iconxiasanjiaoxing "></span>
+                </a>
+            </li>
+            <li class="wuqiu_title_li">
+                <a href="javascript:;"  wuqiu_ti="close"> 管理员列表
+                    <span class="iconfont iconxiasanjiaoxing "></span>
+                </a>
+                <dl  class="wuqiu_title_li_child">
+                    <dd><a href="javascript:;" src="homepage" class="wuqiu_title_a"> 管理员列表</a></dd>
+                    <dd><a href="javascript:;" src="homepage" class="wuqiu_title_a"> 管理员列表</a> </dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <!---->
+    <div class="right_main">
+        <!---->
+        <div class="right_header">
+            <ul class="floatL wuqiu_nav_ul">
+                <li><a href="javascript:;"><span class="iconfont iconliebiao"></span></a></li>
+                <li><a href="javascript:;"><span class="iconfont iconshuaxin"></span></a></li>
+            </ul>
+            <ul class="floatR wuqiu_nav_ul" >
+                <li  class="wuqiu_user wuqiu_title_li" >
+                    <a href="javascript:;" wuqiu_ti="close">
+                        <span id="username">admin</span>
+                        <span class="iconfont iconxiasanjiaoxing floatR"></span>
+                    </a>
+                    <dl class="wuqiu_title_li_child">
+                        <dd><a href="javascript:;" class="wuqiu_title_a">基本信息</a></dd>
+                        <dd><a href="javascript:;" class="wuqiu_title_a">修改密码</a></dd>
+                        <dd><a href="/login">退出登录</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <!---->
+        <div class="wuqiu_pagetabs"></div>
+        <iframe class="wuqiu_iframe" src="homepage" frameborder="0"></iframe>
+    </div>
+</body>
+<script src="js/lib/jquery-3.4.1.js"></script>
+<script src="js/wuqiu.js"></script>
+<script>
+$.ajax({
+    type:"get",
+    dataType:"json",
+    url:"getYan",
+    success:function (data) {
+        console.log(data)
+    }
+})
+</script>
+</html>

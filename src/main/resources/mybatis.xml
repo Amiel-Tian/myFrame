@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--引入配置文件-->
+    <properties resource="jdbc.properties"></properties>
+
+    <!--设置显示控制台信息-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!--配置插件：-->
+    <plugins>
+        <!--分页插件
+            执行sql语句前调用
+            PageHelper.startPage(2,3); 第几页，一页几条数据
+        -->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+
+    <!--配置连接数据库-->
+    <environments default="jdbc1">
+        <environment id="jdbc1">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.user}"/>
+                <property name="password" value="${jdbc.pass}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="com\example\myweb\dao\AdminDao.xml"></mapper>
+<!--        <package name=""/>-->
+    </mappers>
+
+</configuration>

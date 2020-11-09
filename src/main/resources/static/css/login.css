@@ -1,0 +1,19 @@
+body{
+	background-color: #f2f2f2;
+}
+.wuqiu_login_box{
+    width: 375px;
+    margin: auto;
+	padding-top: 110px;
+}
+
+.wuqiu_login_box .wuqiu_login_header{
+	padding: 20px;
+}
+
+.wuqiu_login_box .wuqiu_login_header h2{
+	text-align: center;
+	font-weight: 400;
+	font-size: 25px;
+	margin-bottom: 15px;
+}

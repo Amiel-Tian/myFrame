@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>登录</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/wuqiu.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/animation.css"/>
+	<link rel="stylesheet" href="font/iconfont.css">
+</head>
+<body>
+<div class="wuqiu_login_box">
+	<div class="wuqiu_login_header">
+		<h2>后台管理系统</h2>
+	</div>
+
+	<!-- 登录 -->
+	<div class="wuqoi_login_main">
+		<div class="wuqiu_form_item">
+			<span class="iconfont iconyonghu wuqiu_icon"></span>
+			<input type="text" id="user" class="wuqiu_input" placeholder="用户名">
+		</div>
+		<div class="wuqiu_form_item">
+			<span class="iconfont iconmima wuqiu_icon"></span>
+			<input type="password" id="pass" class="wuqiu_input" placeholder="密码">
+		</div>
+
+		<div class="wuqiu_form_item clearFloat">
+			<div class="wuqiu_small_58 clearFloat">
+				<span class="iconfont iconanquan wuqiu_icon"></span>
+				<input type="text" id="code" name="" value="" class="wuqiu_input" placeholder="验证码"/>
+			</div>
+			<div class="wuqiu_small_41"><img src="http://localhost:80/getVerify" class="floatR" id="codeimg" alt="" height="25px"></div>
+		</div>
+
+		<div class="clearFloat" style="margin-bottom: 15px;">
+
+		</div>
+
+		<div class="wuqiu_form_item">
+			<input type="button" name="" id="btn" value="登录" class=" BG_009688 wuqiu_btn wuqiu_btn_100" />
+		</div>
+
+		<div class="wuqiu_form_item">
+			<a href="" class="wuqiu_link floatR" style="margin-left: 12px;">忘记密码？</a>
+			<a href="register" class="wuqiu_link floatR">注册账号</a>
+		</div>
+	</div>
+
+	<div class="footer"></div>
+</div>
+<div class="wuqiu_move" style="display: none;">
+</div>
+</body>
+<script src="js/lib/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/wuqiu.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+</html>

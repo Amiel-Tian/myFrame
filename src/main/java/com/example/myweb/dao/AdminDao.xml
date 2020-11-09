@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.myweb.dao.AdminDao">
+    <resultMap id="res" type="com.example.myweb.bean.Admin">
+        <id column="user" property="name"></id>
+        <result column="pass" property="passwd"></result>
+    </resultMap>
+    <select id="selectAll" resultType="com.example.myweb.bean.Admin">
+        select * from admin
+    </select>
+    <select id="verifyUser" resultType="com.example.myweb.bean.Admin">
+        select * from admin where name=#{name} and passwd=#{passwd}
+    </select>
+    <insert id="insertUser" >
+        insert into admin values(#{name},#{name})
+    </insert>
+</mapper>

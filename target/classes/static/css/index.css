@@ -1,0 +1,48 @@
+body{
+    display: flex;
+}
+
+.left_title{
+    width: 220px;
+    background-color: #222222;
+    text-align: center;
+    overflow-y: auto;
+
+    transition: width 0.5s;
+}
+.right_main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.left_header, .right_header{
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+.left_header{
+    transition: width 0.5s;
+    width: 220px;
+    height: 50px;
+    position: fixed;
+    background-color: #3A3D49 !important;
+    color:rgba(255,255,255,0.8);
+    border-bottom: 1px #000000 solid;
+}
+.right_header{
+    border-bottom: 1px solid #f6f6f6;
+}
+.left_title .wuqiu_title{
+    margin-top: 50px;
+}
+/**/
+.wuqiu_pagetabs{
+    height: 40px;
+    box-shadow:0 1px 2px 0 rgba(0,0,0,.1);
+    margin-bottom: 2px;
+}
+/**/
+.wuqiu_iframe{
+    flex: 1;
+}
